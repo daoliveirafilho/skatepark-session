@@ -1,0 +1,28 @@
+---
+import '../../styles/pages/about.css';
+import config from '../../../astro-theme-config';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const profileImageUrl = config.about.profileImage.trim();
+const hasProfileImage = profileImageUrl.length > 0;
+const profileName = config.about.name || config.site.author;
+const profileRole = config.about.role;
+const profileLocation = config.about.location;
+const profileFocus = config.about.focus;
+const profileLead = config.about.lead;
+---
+
+<BaseLayout title="Termos" description={profileLead}>
+<main id="main-content" class="about-main">
+<p>
+Os termos de uso de uma pista de skate exigem obrigatoriamente o uso de equipamentos de prote&ccedil;&atilde;o e o respeito &agrave; linha e ao tempo de cada atleta.
+</p>
+<p>
+O atleta ou seus respons&aacute;veis assumem total responsabilidade civil e criminal por quaisquer acidentes ou danos.
+</p>
+<p>
+Voc&ecirc; pode, a qualquer momento, solicitar pelo grupo no WhatsApp. A exclus&atilde;o dos seus dados da nossa base de contatos. A corre&ccedil;&atilde;o de alguma informa&ccedil;&atilde;o incorreta. O cancelamento do envio de mensagens d
+e novidades ou ofertas.
+</p>
+</main>
+</BaseLayout>
