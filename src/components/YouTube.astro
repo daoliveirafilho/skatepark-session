@@ -1,13 +1,13 @@
 ---
 export interface Props {
-  id?: string;
-  title?: string;
+  id: string;
+  title: string;
 }
 const { id, title } = Astro.props;
 ---
 <div class="video-container">
   <iframe
-    src={`https://www.youtube.com/embed/{id}`}
+    src={id}
     title={title}
     allow="autoplay;"
     allowfullscreen
@@ -17,7 +17,7 @@ const { id, title } = Astro.props;
 <style>
   .video-container {
     position: relative;
-    padding-bottom: 56.25%;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
     height: 0;
     overflow: hidden;
   }
