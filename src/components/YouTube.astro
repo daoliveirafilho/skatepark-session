@@ -1,9 +1,9 @@
 ---
 export interface Props {
-  id: string;
+  id?: string;
   title?: string;
 }
-const { id, title = "YouTube Video" } = Astro.props;
+const { id, title } = Astro.props;
 ---
 <div class="video-container">
   <iframe
@@ -17,7 +17,7 @@ const { id, title = "YouTube Video" } = Astro.props;
 <style>
   .video-container {
     position: relative;
-    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    padding-bottom: 56.25%;
     height: 0;
     overflow: hidden;
   }
